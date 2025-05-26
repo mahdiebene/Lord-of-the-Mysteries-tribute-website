@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord of the Mysteries - Enter the Mystical World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4A017;
+            --silver: #C0C0C0;
+            --dark-bg: #1A2526;
+            --darker-bg: #0A0E0F;
+            --off-white: #E8E8E8;
+            --shadow-dark: rgba(0, 0, 0, 0.7);
+            --crimson: #8B0000;
+            --mystical-blue: #191970;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            color: var(--off-white);
+            background: var(--dark-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            text-shadow: 0 0 15px rgba(212, 160, 23, 0.5);
+            text-align: center;
+            margin-bottom: 1rem;
+            animation: flicker 3s infinite ease-in-out;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--silver);
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+            margin-bottom: 0.8rem;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .accent-text {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.75rem;
+            color: var(--silver);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(212, 160, 23, 0.5); }
+            50% { opacity: 0.85; text-shadow: 0 0 20px rgba(212, 160, 23, 0.7); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes revealCard {
+            from { 
+                opacity: 0; 
+                transform: rotateY(90deg) scale(0.8);
+            }
+            to { 
+                opacity: 1; 
+                transform: rotateY(0) scale(1);
+            }
+        }
+
+        @keyframes mysticalGlow {
+            0%, 100% { box-shadow: 0 0 5px var(--gold), 0 0 10px var(--gold); }
+            50% { box-shadow: 0 0 20px var(--gold), 0 0 30px var(--gold); }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+                        radial-gradient(circle at 20% 50%, rgba(212, 160, 23, 0.1) 0%, transparent 50%),
+                        var(--darker-bg);
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(212, 160, 23, 0.02) 10px,
+                rgba(212, 160, 23, 0.02) 20px
+            );
+            animation: float 20s infinite linear;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--silver);
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 90vw;
+        }
+
+        /* Victorian Quote */
+        .victorian-quote {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--silver);
+            text-align: center;
+            margin: 1rem 0;
+            padding: 0 1rem;
+            opacity: 0.8;
+        }
+
+        .victorian-quote::before,
+        .victorian-quote::after {
+            content: '"';
+            font-size: 1.5rem;
+            color: var(--gold);
+            opacity: 0.5;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--dark-bg);
+            border: 2px solid var(--gold);
+            color: var(--off-white);
+            padding: 0.75rem 1.5rem;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(212, 160, 23, 0.3);
+            cursor: pointer;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+            opacity: 0.3;
+        }
+
+        .cta-button:hover::before,
+        .cta-button:active::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:active {
+            box-shadow: 0 0 25px rgba(212, 160, 23, 0.6);
+            transform: scale(0.98);
+        }
+
+        /* Section Divider */
+        .section-divider {
+            text-align: center;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+
+        .section-divider::before {
+            left: 0;
+        }
+
+        .section-divider::after {
+            right: 0;
+        }
+
+        .divider-symbol {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+            border-radius: 50%;
+            position: relative;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .divider-symbol::before {
+            content: '⟡';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        /* Novel Description Section */
+        .novel-section {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .novel-description {
+            background: linear-gradient(135deg, rgba(26, 37, 38, 0.8), rgba(10, 14, 15, 0.9));
+            border: 1px solid rgba(212, 160, 23, 0.3);
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .novel-description::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--gold), transparent, var(--silver));
+            border-radius: 8px;
+            opacity: 0.2;
+            z-index: -1;
+            animation: float 6s infinite linear;
+        }
+
+        /* World Building Section */
+        .world-section {
+            padding: 2rem 1rem;
+            background: linear-gradient(180deg, var(--dark-bg), var(--darker-bg));
+        }
+
+        .world-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .world-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .world-card {
+            background: rgba(10, 14, 15, 0.8);
+            border: 1px solid rgba(212, 160, 23, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .world-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(212, 160, 23, 0.1), transparent);
+            transform: translate(30px, -30px);
+        }
+
+        /* Pathways Section */
+        .pathways-section {
+            padding: 2rem 1rem;
+            background: var(--darker-bg);
+        }
+
+        .pathway-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            max-width: 1000px;
+            margin: 1.5rem auto 0;
+        }
+
+        .pathway-item {
+            background: linear-gradient(135deg, rgba(26, 37, 38, 0.9), rgba(10, 14, 15, 0.95));
+            border-left: 3px solid var(--gold);
+            padding: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pathway-item:active {
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(212, 160, 23, 0.3);
+        }
+
+        .pathway-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .pathway-sequence {
+            font-size: 0.8rem;
+            color: var(--silver);
+            opacity: 0.9;
+        }
+
+        /* Tarot Club Section */
+        .tarot-section {
+            padding: 2rem 1rem;
+            background: linear-gradient(180deg, var(--darker-bg), var(--dark-bg));
+        }
+
+        .tarot-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(26, 37, 38, 0.5);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        /* Characters Section */
+        .characters-section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        .character-card {
+            background: var(--darker-bg);
+            border: 2px solid rgba(212, 160, 23, 0.4);
+            border-radius: 8px;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: revealCard 0.8s ease-out;
+            animation-fill-mode: both;
+            cursor: pointer;
+            min-height: 280px;
+        }
+
+        .character-card:nth-child(2) { animation-delay: 0.2s; }
+        .character-card:nth-child(3) { animation-delay: 0.4s; }
+        .character-card:nth-child(4) { animation-delay: 0.6s; }
+        .character-card:nth-child(5) { animation-delay: 0.8s; }
+        .character-card:nth-child(6) { animation-delay: 1s; }
+        .character-card:nth-child(7) { animation-delay: 1.2s; }
+        .character-card:nth-child(8) { animation-delay: 1.4s; }
+
+        .character-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(212, 160, 23, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .character-card:active::before {
+            opacity: 1;
+        }
+
+        .character-card:active {
+            transform: scale(0.98);
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212, 160, 23, 0.5);
+        }
+
+        .character-image-placeholder {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--dark-bg), rgba(212, 160, 23, 0.1));
+            border: 1px solid rgba(212, 160, 23, 0.3);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .character-image-placeholder::before {
+            content: attr(data-character);
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            color: rgba(212, 160, 23, 0.2);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .character-image-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(212, 160, 23, 0.05) 10px,
+                rgba(212, 160, 23, 0.05) 20px
+            );
+            animation: float 10s infinite linear;
+        }
+
+        .character-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(212, 160, 23, 0.3);
+        }
+
+        .character-title {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--silver);
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .character-pathway {
+            font-size: 0.75rem;
+            color: var(--gold);
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .character-description {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--off-white);
+            opacity: 0.9;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 2rem 1rem;
+            background: var(--darker-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 2rem auto 0;
+        }
+
+        .gallery-item {
+            background: var(--dark-bg);
+            border: 1px solid rgba(212, 160, 23, 0.3);
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-item::before {
+            content: attr(data-scene);
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.2rem;
+            color: rgba(212, 160, 23, 0.3);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+
+        .gallery-caption {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.85rem;
+            color: var(--silver);
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        /* Mysteries Section */
+        .mysteries-section {
+            padding: 2rem 1rem;
+            background: linear-gradient(180deg, var(--dark-bg), var(--darker-bg));
+        }
+
+        .mystery-box {
+            background: rgba(10, 14, 15, 0.9);
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+
+        .mystery-box::before {
+            content: '?';
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(212, 160, 23, 0.1);
+            font-family: 'Cinzel Decorative', serif;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--darker-bg);
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 160, 23, 0.2);
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.75rem;
+            color: var(--silver);
+            opacity: 0.7;
+            line-height: 1.4;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            background: var(--dark-bg);
+            border: 2px solid var(--gold);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--gold);
+            margin: 2px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: var(--darker-bg);
+            border-left: 2px solid var(--gold);
+            padding: 5rem 2rem 2rem;
+            transition: right 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .nav-link {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--off-white);
+            text-decoration: none;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:active {
+            color: var(--gold);
+            padding-left: 1rem;
+        }
+
+        /* Fog Overlay */
+        .fog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(26, 37, 38, 0.3) 100%);
+            opacity: 0.5;
+        }
+
+        /* Mystical Elements */
+        .mystical-symbol {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 0 0.5rem;
+            position: relative;
+            animation: mysticalGlow 3s infinite ease-in-out;
+        }
+
+        .mystical-symbol::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            body {
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .accent-text {
+                font-size: 0.9rem;
+            }
+
+            .hero-section {
+                min-height: 100vh;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+                max-width: 600px;
+            }
+
+            .world-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pathway-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .character-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .character-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            }
+
+            .character-card:hover::before {
+                opacity: 1;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 1rem 2rem;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .mobile-nav {
+                display: none;
+            }
+
+            /* Desktop Navigation */
+            .desktop-nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 15, 0.95);
+                border-bottom: 1px solid var(--gold);
+                padding: 1rem 2rem;
+                z-index: 999;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .desktop-nav .nav-link {
+                border-bottom: none;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+
+            .desktop-nav .nav-link:hover {
+                color: var(--gold);
+                text-shadow: 0 0 10px rgba(212, 160, 23, 0.5);
+            }
+        }
+
+        /* Parallax Effect for Desktop */
+        @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+            .hero-section {
+                background-attachment: fixed;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--darker-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-symbol {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(212, 160, 23, 0.3);
+            border-top: 3px solid var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Hide desktop nav on mobile */
+        .desktop-nav {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-symbol"></div>
+    </div>
+
+    <!-- Fog Overlay -->
+    <div class="fog-overlay"></div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#novel" class="nav-link">Novel</a>
+        <a href="#world" class="nav-link">World</a>
+        <a href="#pathways" class="nav-link">Pathways</a>
+        <a href="#tarot" class="nav-link">Tarot Club</a>
+        <a href="#characters" class="nav-link">Characters</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#mysteries" class="nav-link">Mysteries</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#novel" class="nav-link">About the Novel</a>
+        <a href="#world" class="nav-link">World Building</a>
+        <a href="#pathways" class="nav-link">Pathways</a>
+        <a href="#tarot" class="nav-link">Tarot Club</a>
+        <a href="#characters" class="nav-link">Characters</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#mysteries" class="nav-link">Mysteries</a>
+        <a href="#footer" class="nav-link">Credits</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Lord of the Mysteries</h1>
+            <p class="hero-subtitle">Step through the fog of time into a world where madness and divinity dance at the edge of reason</p>
+            <p class="victorian-quote">In the fog of history and darkness, who whispered in your ear?</p>
+            <a href="#novel" class="cta-button">Enter the Mystical World</a>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- Novel Description -->
+    <section class="novel-section" id="novel">
+        <div class="novel-description">
+            <h2>The Chronicles of The Fool</h2>
+            <p>
+                Lord of the Mysteries by Cuttlefish That Loves Diving is a gripping blend of Victorian fantasy, occult horror, and intricate world-building. Follow Klein Moretti, a modern man reborn in a mysterious world of Beyonders, where supernatural powers come at a perilous cost. As he navigates a shadowy society of secret organizations, ancient gods, and cryptic rituals, Klein assumes the mantle of The Fool, weaving fate through the enigmatic Tarot Club. With its rich lore, complex characters, and a haunting mix of light and darkness, this novel captivates readers with its blend of mystery and mysticism.
+            </p>
+            <div style="margin-top: 1.5rem;">
+                <h3>Novel Details</h3>
+                <p class="accent-text">Author: Cuttlefish That Loves Diving (爱潜水的乌贼)</p>
+                <p class="accent-text">Original Title: 诡秘之主</p>
+                <p class="accent-text">Genre: Western Fantasy, Mystery, Steampunk</p>
+                <p class="accent-text">Chapters: 1432 (Completed)</p>
+                <p class="accent-text">Status: Sequel "Circle of Inevitability" ongoing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- World Building Section -->
+    <section class="world-section" id="world">
+        <div class="world-container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">The Victorian-Era Mystical World</h2>
+            <p style="text-align: center; margin-bottom: 2rem; opacity: 0.9;">
+                A world where gas lamps illuminate foggy streets, and ancient powers lurk in the shadows
+            </p>
+            
+            <div class="world-grid">
+                <div class="world-card">
+                    <h3>The Seven Orthodox Churches</h3>
+                    <p>The dominant religious organizations that maintain order in the world:</p>
+                    <ul style="margin-top: 0.5rem; font-size: 0.85rem; list-style: none; padding-left: 0;">
+                        <li>⚜️ Church of the Evernight Goddess</li>
+                        <li>☀️ Church of the Eternal Blazing Sun</li>
+                        <li>⚡ Church of the Lord of Storms</li>
+                        <li>⚙️ Church of the God of Steam and Machinery</li>
+                        <li>🌍 Church of the Earth Mother</li>
+                        <li>📚 Church of the God of Knowledge and Wisdom</li>
+                        <li>⚔️ Church of the God of Combat</li>
+                    </ul>
+                </div>
+                
+                <div class="world-card">
+                    <h3>Major Kingdoms & Regions</h3>
+                    <p>The world is divided into several major powers:</p>
+                    <ul style="margin-top: 0.5rem; font-size: 0.85rem; list-style: none; padding-left: 0;">
+                        <li>🏰 Loen Kingdom - Victorian-inspired kingdom where the story begins</li>
+                        <li>🦅 Feysac Empire - Northern military powerhouse</li>
+                        <li>🎭 Intis Republic - Revolutionary nation of art and industry</li>
+                        <li>🌙 Feynapotter Kingdom - Land of mysticism and scholars</li>
+                        <li>🏺 Southern Continent - Colonial territories and ancient mysteries</li>
+                    </ul>
+                </div>
+                
+                <div class="world-card">
+                    <h3>Secret Organizations</h3>
+                    <p>Hidden societies that operate in the shadows:</p>
+                    <ul style="margin-top: 0.5rem; font-size: 0.85rem; list-style: none; padding-left: 0;">
+                        <li>🎪 Tarot Club - Klein's mysterious gathering</li>
+                        <li>👁️ Twilight Hermit Order - Ancient conspiracy</li>
+                        <li>🌹 Demoness Sect - Practitioners of pleasure and catastrophe</li>
+                        <li>🎯 Aurora Order - Fanatical believers of the True Creator</li>
+                        <li>🔮 Moses Ascetic Order - Seekers of hidden knowledge</li>
+                        <li>⚗️ Psychology Alchemists - Masters of the mind</li>
+                    </ul>
+                </div>
+                
+                <div class="world-card">
+                    <h3>The Beyonder System</h3>
+                    <p>The supernatural power system of the world:</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                        Beyonders consume mystical potions to gain supernatural abilities, advancing through Sequences from 9 to 0. Each pathway represents a different route to godhood, with unique powers and increasing risk of losing control. The iron rule: similar pathways attract, different pathways conflict.
+                    </p>
+                    <p class="accent-text" style="margin-top: 0.5rem;">
+                        "Do not look directly at God!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- Pathways Section -->
+    <section class="pathways-section" id="pathways">
+        <div class="world-container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">The 22 Pathways to Godhood</h2>
+            <p style="text-align: center; margin-bottom: 2rem; opacity: 0.9; max-width: 800px; margin: 0 auto 2rem;">
+                Each pathway represents a unique route to divinity, corresponding to the Major Arcana of tarot
+            </p>
+            
+            <div class="pathway-list">
+                <div class="pathway-item">
+                    <div class="pathway-name">0. Fool Pathway</div>
+                    <div class="pathway-sequence">Seer → Clown → Magician → Faceless → Marionettist → Bizarro Sorcerer → Scholar of Yore → Miracle Invoker → Attendant of Mysteries → The Fool</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">1. Error Pathway</div>
+                    <div class="pathway-sequence">Marauder → Swindler → Cryptologist → Fire Mage → Dream Stealer → Parasite → Mentor of Deceit → Trojan Horse of Fate → Worm of Time → Error</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">2. Door Pathway</div>
+                    <div class="pathway-sequence">Apprentice → Trickmaster → Astrologer → Scrolls Professor → Traveler → Secrets Sorcerer → Wanderer → Planeswalker → Key of Stars → Door</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">3. Evernight Pathway</div>
+                    <div class="pathway-sequence">Sleepless → Midnight Poet → Nightmare → Shaman → Spirit Guide → Gatekeeper → Demoness of Repose → Spirit World Plunderer → Calamity Maiden → Evernight Goddess</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">4. Twilight Giant Pathway</div>
+                    <div class="pathway-sequence">Warrior → Pugilist → Weapon Master → Dawn Paladin → Guardian → Demon Hunter → Silver Knight → Demon Hunter → Glory → Twilight Giant</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">5. Death Pathway</div>
+                    <div class="pathway-sequence">Corpse Collector → Gravedigger → Spirit Medium → Spirit Guide → Gatekeeper → Undying → Death Consul → Pale Emperor → Underworld Emperor → Death</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">6. Darkness Pathway</div>
+                    <div class="pathway-sequence">Sleepless → Midnight Poet → Nightmare → Darkness Bishop → Servant of Concealment → Sequence 4-0 details hidden in shadows</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">7. Sun Pathway</div>
+                    <div class="pathway-sequence">Bard → Light Suppliant → Solar High Priest → Notary → Light Mage → Priest of Light → Lightseeker → Divine Brilliance → Glory → Sun</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">8. Tyrant Pathway</div>
+                    <div class="pathway-sequence">Sailor → Folk of Rage → Seafarer → Wind-blessed → Ocean Songster → Cataclysmic Interrer → Sea King → Calamity of Oceans → Neptune → Tyrant</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">9. Hanged Man Pathway</div>
+                    <div class="pathway-sequence">Secrets Suppliant → Listener → Shadow Ascetic → Servant of Concealment → Shepherd → Elder of Corruption → Weaver → Spawn of Chaos → Attendant of Mysteries → True Creator</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">10. Wheel of Fortune Pathway</div>
+                    <div class="pathway-sequence">Monster → Lucky One → Calamity Priest → Winner → Misfortune Mage → Chaos Walker → Prophet → Soothsayer → Author of Fate → Wheel of Fortune</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">11. Justice Pathway</div>
+                    <div class="pathway-sequence">Spectator → Telepathist → Psychiatrist → Hypnotist → Dreamwalker → Manipulator → Discerner → Dream Weaver → Author → Visionary</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">12. Black Emperor Pathway</div>
+                    <div class="pathway-sequence">Lawyer → Barbarian → Briber → Baron of Corruption → Mentor of Disorder → Earl of the Fallen → Frenzied Mage → Duke of Entropy → Prince of Abolition → Black Emperor</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">13. War Pathway</div>
+                    <div class="pathway-sequence">Hunter → Provocateur → Pyromaniac → Conspiracist → Disciplinary Paladin → Reaper → Iron-blooded Knight → War Bishop → Weather Warlock → Red Priest</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">14. Demoness Pathway</div>
+                    <div class="pathway-sequence">Assassin → Instigator → Witch → Pleasure → Afflictions → Demoness of Despair → Catastrophe → Apocalypse → Conqueror → Primordial Demoness</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">15. Hermit Pathway</div>
+                    <div class="pathway-sequence">Mystery Pryer → Melee Scholar → Warlock → Scroll Professor → Constellations Master → Mysticologist → Knowledge Emperor → Sage → Hermit → Hidden Sage</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">20. Judgment Pathway</div>
+                    <div class="pathway-sequence">Arbiter → Sheriff → Interrogator → Judge → Disciplinary Paladin → Knight of the Holy Light → Law Weaver → Hand of Order → Emperor of Order → Justiciar</div>
+                </div>
+                
+                <div class="pathway-item">
+                    <div class="pathway-name">Other Notable Pathways</div>
+                    <div class="pathway-sequence">Mother (Moon) • Paragon (Perfect One) • Abyss (Devil) • Chained (Prisoner)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- Tarot Club Section -->
+    <section class="tarot-section" id="tarot">
+        <div class="world-container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">
+                The Tarot Club
+                <span class="mystical-symbol"></span>
+            </h2>
+            
+            <div class="tarot-info">
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    Above the gray fog, in a magnificent palace that exists beyond reality, The Fool gathers his chosen. Every Monday at 3 PM Backlund time, members from across the world project their spirits to attend this most mysterious of gatherings.
+                </p>
+                <p class="victorian-quote" style="margin: 1.5rem 0;">
+                    "Good afternoon, Mr. Fool~"
+                </p>
+                <p style="font-size: 0.85rem; opacity: 0.9;">
+                    Here, identities are hidden behind tarot cards, knowledge is currency, and every transaction could alter the fate of nations. From humble beginnings with just three members, the Tarot Club has grown into a force that even the Orthodox Churches and ancient organizations must acknowledge.
+                </p>
+            </div>
+            
+            <div class="world-card" style="max-width: 800px; margin: 0 auto;">
+                <h3>Tarot Club Principles</h3>
+                <ol style="font-size: 0.85rem; line-height: 1.6; padding-left: 1.5rem;">
+                    <li>Equivalent exchange - Nothing is free in the world of mysticism</li>
+                    <li>Absolute confidentiality - What happens above the gray fog, stays above the gray fog</li>
+                    <li>Mutual assistance - Members help each other, for a price</li>
+                    <li>Knowledge sharing - Information about Sequences, rituals, and mysticism</li>
+                    <li>The Fool's protection - Under his gaze, all are equal</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- Characters Section -->
+    <section class="characters-section" id="characters">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Members of the Tarot Club</h2>
+        <div class="character-grid">
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="0"></div>
+                <h3 class="character-name">Klein Moretti</h3>
+                <p class="character-title">The Fool</p>
+                <p class="character-pathway">Fool Pathway</p>
+                <p class="character-description">A wanderer in the fog, cloaked in mystery, he weaves fate as The Fool, balancing mortal wit with divine ambition. Formerly Zhou Mingrui, he navigates the dangerous world of Beyonders while maintaining his humanity.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="XI"></div>
+                <h3 class="character-name">Audrey Hall</h3>
+                <p class="character-title">Justice</p>
+                <p class="character-pathway">Spectator Pathway</p>
+                <p class="character-description">A noble lady whose bright eyes conceal a mind attuned to the hearts of others. The most enthusiastic member of the Tarot Club, she balances her aristocratic life with her journey as a Beyonder psychiatrist.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="XII"></div>
+                <h3 class="character-name">Alger Wilson</h3>
+                <p class="character-title">The Hanged Man</p>
+                <p class="character-pathway">Tyrant Pathway</p>
+                <p class="character-description">A sailor of shadowed seas, bearing secrets as deep as the abyss. Captain of the Blue Avenger, he serves the Church of the Lord of Storms while pursuing his own mysterious agenda.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="VII"></div>
+                <h3 class="character-name">Derrick Berg</h3>
+                <p class="character-title">The Sun</p>
+                <p class="character-pathway">Sun Pathway</p>
+                <p class="character-description">A young warrior from the forsaken land of Silver City, where the sun has not shone for over two thousand years. His pure heart and honest nature bring light to the Tarot Club.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="XVI"></div>
+                <h3 class="character-name">Fors Wall</h3>
+                <p class="character-title">The Magician</p>
+                <p class="character-pathway">Door Pathway</p>
+                <p class="character-description">A best-selling novelist plagued by mysterious whispers during the full moon. Her laziness masks a sharp wit and growing power as she advances through the Door pathway.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="XX"></div>
+                <h3 class="character-name">Xio Derecha</h3>
+                <p class="character-title">Judgment</p>
+                <p class="character-pathway">Arbiter Pathway</p>
+                <p class="character-description">A petite bounty hunter with an imposing presence. Despite her small stature, her sense of justice and growing authority make her a formidable ally in East Borough's underworld.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="XIV"></div>
+                <h3 class="character-name">Emlyn White</h3>
+                <p class="character-title">The Moon</p>
+                <p class="character-pathway">Moon Pathway</p>
+                <p class="character-description">A proud vampire who insists he's not a vampire. This "Baron of the Blood Clan" serves the Earth Mother while maintaining his sophisticated tastes and prideful demeanor.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="IX"></div>
+                <h3 class="character-name">Cattleya</h3>
+                <p class="character-title">The Hermit</p>
+                <p class="character-pathway">Hermit Pathway</p>
+                <p class="character-description">The "Admiral of Stars" and one of the seven pirate admirals. A Knowledge Emperor who commands the Future and seeks forbidden truths across the Five Seas.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-image-placeholder" data-character="★"></div>
+                <h3 class="character-name">Leonard Mitchell</h3>
+                <p class="character-title">The Star</p>
+                <p class="character-pathway">Darkness Pathway</p>
+                <p class="character-description">A poet with shadows in his past and an angel parasitizing his body. This Red Glove of the Church of Evernight walks the line between light and darkness with enigmatic grace.</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Other Notable Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="∞"></div>
+                    <h3 class="character-name">Azik Eggers</h3>
+                    <p class="character-title">Mr. Azik</p>
+                    <p class="character-pathway">Death Pathway - Sequence 2</p>
+                    <p class="character-description">Klein's mentor and friend, an amnesiac Death Consul searching for his lost memories across the ages. His copper whistle serves as Klein's lifeline in desperate times.</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="⚔"></div>
+                    <h3 class="character-name">Dunn Smith</h3>
+                    <p class="character-title">Captain</p>
+                    <p class="character-pathway">Sleepless Pathway</p>
+                    <p class="character-description">The Nighthawk captain with gray eyes and a poor memory. His sacrifice and dedication to protecting Tingen City left an indelible mark on Klein's journey.</p>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="♠"></div>
+                    <h3 class="character-name">Amon</h3>
+                    <p class="character-title">Angel of Time</p>
+                    <p class="character-pathway">Error Pathway - King of Angels</p>
+                    <p class="character-description">The Blasphemer, Angel of Deceit, and son of the ancient sun god. His monocle has become a symbol of paranoia throughout Klein's journey. "Stealing" is his nature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="world-container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Mystical Locations & Scenes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-scene="Above the Gray Fog">
+                    <p class="gallery-caption">The mysterious space where the Tarot Club gathers</p>
+                </div>
+                
+                <div class="gallery-item" data-scene="Backlund">
+                    <p class="gallery-caption">Capital of the Loen Kingdom, city of fog and opportunity</p>
+                </div>
+                
+                <div class="gallery-item" data-scene="Forsaken Land">
+                    <p class="gallery-caption">Where darkness reigns eternal and monsters roam</p>
+                </div>
+                
+                <div class="gallery-item" data-scene="Sefirah Castle">
+                    <p class="gallery-caption">The Fool's divine kingdom above the spirit world</p>
+                </div>
+                
+                <div class="gallery-item" data-scene="City of Silver">
+                    <p class="gallery-caption">Last bastion of humanity in the Forsaken Land</p>
+                </div>
+                
+                <div class="gallery-item" data-scene="Calderón City">
+                    <p class="gallery-caption">The mysterious city in the spirit world's depths</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-symbol"></div>
+    </div>
+
+    <!-- Mysteries Section -->
+    <section class="mysteries-section" id="mysteries">
+        <div class="world-container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Unsolved Mysteries</h2>
+            
+            <div class="mystery-box">
+                <h3>The Fourth Epoch</h3>
+                <p>The epoch of gods walking among humans, when the Solomon Empire, Tudor Empire, and Trunsoest Empire divided the Northern Continent. What caused the catastrophe that ended this age of myths?</p>
+            </div>
+            
+            <div class="mystery-box">
+                <h3>The Celestial Worthy</h3>
+                <p>The previous owner of Sefirah Castle and the Fool pathway's Sequence 0. His resurrection threatens Klein's very existence. Who was he, and what are his true plans?</p>
+            </div>
+            
+            <div class="mystery-box">
+                <h3>The Cosmos</h3>
+                <p>Beyond Earth lies the vast cosmos where Outer Deities dwell. The Crimson Moon watches, the Mother Tree of Desire beckons, and the Primordial Hunger waits. What lies beyond the barrier?</p>
+            </div>
+            
+            <div class="mystery-box">
+                <h3>The Original Creator</h3>
+                <p>The one who created everything, whose awakening means the end of all. Is every god merely a part of Him seeking to reunite? What is the truth behind the Creation myth?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Novel Information</h3>
+                <p class="footer-text">
+                    Lord of the Mysteries (诡秘之主) by Cuttlefish That Loves Diving (爱潜水的乌贼)<br>
+                    Original publication: April 2018 - May 2020<br>
+                    1432 chapters completed | Sequel "Circle of Inevitability" ongoing
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Fan Community</h3>
+                <p class="footer-text">
+                    This tribute website celebrates the incredible world created by Cuttlefish That Loves Diving.<br>
+                    Join fellow readers in exploring the mysteries, discussing theories, and sharing fan creations.<br>
+                    Remember: "The oldest and strongest emotion of mankind is fear, and the oldest and strongest fear is fear of the unknown."
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Disclaimer</h3>
+                <p class="footer-text">
+                    This is a non-commercial fan tribute website. All rights to Lord of the Mysteries belong to the original author and publishers.<br>
+                    Character portraits and scene illustrations are CSS-styled placeholders.<br>
+                    Created with love for the LotM community.
+                </p>
+            </div>
+            
+            <div class="footer-section" style="margin-top: 2rem;">
+                <p class="victorian-quote">"May the Goddess watch over you."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Remove loading screen after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hide');
+            }, 500);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = window.innerWidth > 768 ? 80 : 0; // Account for fixed nav on desktop
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Character card tap effects
+        const characterCards = document.querySelectorAll('.character-card');
+        characterCards.forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            
+            card.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // Add parallax effect to fog overlay on desktop
+        if (window.innerWidth > 768 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const fogOverlay = document.querySelector('.fog-overlay');
+                fogOverlay.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animation
+        document.querySelectorAll('.novel-section, .characters-section, .world-section, .pathways-section, .tarot-section, .gallery-section, .mysteries-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+
+        // Add mystical glow to pathway items on hover/tap
+        const pathwayItems = document.querySelectorAll('.pathway-item');
+        pathwayItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.boxShadow = '0 0 20px rgba(212, 160, 23, 0.3)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.boxShadow = '';
+            });
+        });
+
+        // Active navigation highlight
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        function highlightNavigation() {
+            const scrollPosition = window.scrollY;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${sectionId}`) {
+                            item.style.color = 'var(--gold)';
+                        } else {
+                            item.style.color = '';
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavigation);
+    </script>
+</body>
+</html>
