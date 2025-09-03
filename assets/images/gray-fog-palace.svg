@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="fog" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:#D4A017;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1A2526;stop-opacity:0.9" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#fog)"/>
+  
+  <!-- Palace Architecture -->
+  <rect x="50" y="120" width="300" height="120" fill="#0A0E0F" stroke="#D4A017" stroke-width="2"/>
+  <polygon points="50,120 200,60 350,120" fill="#1A2526" stroke="#D4A017" stroke-width="2"/>
+  
+  <!-- Columns -->
+  <rect x="80" y="140" width="8" height="100" fill="#D4A017"/>
+  <rect x="120" y="140" width="8" height="100" fill="#D4A017"/>
+  <rect x="160" y="140" width="8" height="100" fill="#D4A017"/>
+  <rect x="200" y="140" width="8" height="100" fill="#D4A017"/>
+  <rect x="240" y="140" width="8" height="100" fill="#D4A017"/>
+  <rect x="280" y="140" width="8" height="100" fill="#D4A017"/>
+  <rect x="320" y="140" width="8" height="100" fill="#D4A017"/>
+  
+  <!-- Table -->
+  <ellipse cx="200" cy="180" rx="80" ry="20" fill="#8B4513" stroke="#D4A017" stroke-width="1"/>
+  
+  <!-- Chairs -->
+  <circle cx="200" cy="160" r="8" fill="#D4A017" opacity="0.7"/>
+  <circle cx="130" cy="175" r="8" fill="#D4A017" opacity="0.7"/>
+  <circle cx="270" cy="175" r="8" fill="#D4A017" opacity="0.7"/>
+  <circle cx="160" cy="200" r="8" fill="#D4A017" opacity="0.7"/>
+  <circle cx="240" cy="200" r="8" fill="#D4A017" opacity="0.7"/>
+  
+  <!-- Mystical glow -->
+  <circle cx="200" cy="100" r="30" fill="#D4A017" opacity="0.3"/>
+  
+  <text x="200" y="280" text-anchor="middle" font-family="serif" font-size="20" fill="#D4A017">Above the Gray Fog</text>
+</svg>

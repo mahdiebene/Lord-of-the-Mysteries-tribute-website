@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Lord of the Mysteries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-symbol"></div>
+    </div>
+
+    <!-- Fog Overlay -->
+    <div class="fog-overlay"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-brand">Lord of Mysteries</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="pathways.html">Pathways</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="tarot-club.html">Tarot Club</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="characters.html" class="nav-link">Characters</a>
+        <a href="pathways.html" class="nav-link">Pathways</a>
+        <a href="world.html" class="nav-link">World</a>
+        <a href="tarot-club.html" class="nav-link">Tarot Club</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+
+    <div class="page-container">
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">Mystical Gallery</h1>
+                <p class="hero-subtitle">Witness the beauty and terror of key locations from the world of mysteries</p>
+                <p class="victorian-quote">Every scene tells a story, every location holds secrets</p>
+            </div>
+        </section>
+
+        <!-- Featured Locations -->
+        <section class="content-section">
+            <h2 class="section-title">Iconic Locations</h2>
+            
+            <div class="grid grid-2">
+                <div class="character-card" style="min-height: 400px;">
+                    <img src="../assets/images/gray-fog-palace.svg" alt="Above the Gray Fog" class="character-image" style="height: 250px;">
+                    <h3 class="character-name" style="color: var(--gold);">Above the Gray Fog</h3>
+                    <p class="character-title">The Fool's Domain</p>
+                    <div class="character-description">
+                        <p>The mysterious palace where the Tarot Club gathers every Monday. This magnificent structure exists beyond normal space and time, shrouded in eternal gray fog and bathed in divine light.</p>
+                        <p style="margin-top: 1rem; font-style: italic; color: var(--gold);">"In this sacred space, all secrets are safe."</p>
+                    </div>
+                </div>
+
+                <div class="character-card" style="min-height: 400px;">
+                    <img src="../assets/images/backlund-fog.svg" alt="Backlund Streets" class="character-image" style="height: 250px;">
+                    <h3 class="character-name" style="color: var(--silver);">Backlund's Foggy Streets</h3>
+                    <p class="character-title">Capital of Loen Kingdom</p>
+                    <div class="character-description">
+                        <p>The industrial heart of Loen Kingdom, where gas lamps pierce the eternal fog and steam-powered machinery drives progress. Home to nobles, workers, and hidden Beyonders alike.</p>
+                        <p style="margin-top: 1rem; font-style: italic; color: var(--silver);">"In the fog, all truths are hidden."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Portraits Gallery -->
+        <section class="content-section">
+            <h2 class="section-title">Character Portraits</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                Artistic interpretations of the beloved characters from the novel
+            </p>
+            
+            <div class="grid grid-3">
+                <div class="character-card">
+                    <img src="../assets/images/klein-moretti.svg" alt="Klein Moretti" class="character-image">
+                    <h3 class="character-name">Klein Moretti</h3>
+                    <p class="character-title">The Fool • Sequence 1</p>
+                    <p class="character-description">The mysterious leader of the Tarot Club, wielding powers beyond mortal comprehension.</p>
+                </div>
+                
+                <div class="character-card">
+                    <img src="../assets/images/audrey-hall.svg" alt="Audrey Hall" class="character-image">
+                    <h3 class="character-name">Audrey Hall</h3>
+                    <p class="character-title">Justice • Sequence 5</p>
+                    <p class="character-description">The noble lady whose curiosity opened the door to the mystical world.</p>
+                </div>
+                
+                <div class="character-card">
+                    <img src="../assets/images/alger-wilson.svg" alt="Alger Wilson" class="character-image">
+                    <h3 class="character-name">Alger Wilson</h3>
+                    <p class="character-title">The Hanged Man • Sequence 6</p>
+                    <p class="character-description">The pragmatic sailor who bridges the gap between sea and mysticism.</p>
+                </div>
+                
+                <div class="character-card">
+                    <img src="../assets/images/derrick-berg.svg" alt="Derrick Berg" class="character-image">
+                    <h3 class="character-name">Derrick Berg</h3>
+                    <p class="character-title">The Sun • Sequence 7</p>
+                    <p class="character-description">The pure-hearted warrior bringing light from the darkest land.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mystical Artifacts -->
+        <section class="content-section">
+            <h2 class="section-title">Mystical Artifacts & Symbols</h2>
+            
+            <div class="grid grid-2">
+                <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; color: var(--gold);">🃏</div>
+                    <h3>The Fool Card</h3>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        The tarot card that represents Klein's pathway and the beginning of all journeys into the mystical. Symbol of infinite possibilities and divine wisdom.
+                    </p>
+                </div>
+                
+                <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; color: var(--silver);">🔮</div>
+                    <h3>Crystal Ball</h3>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        The primary tool of Seers and diviners, allowing glimpses into past, present, and potential futures. Klein's first connection to the mystical world.
+                    </p>
+                </div>
+                
+                <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; color: var(--gold);">🔔</div>
+                    <h3>Azik's Copper Whistle</h3>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        The mysterious whistle that summons Azik's undead messenger. A lifeline for Klein in his most desperate moments.
+                    </p>
+                </div>
+                
+                <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; color: var(--crimson);">👁️</div>
+                    <h3>Amon's Monocle</h3>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        The crystal monocle worn by the Angel of Time. A symbol of paranoia and the constant threat of deception throughout Klein's journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene Collections -->
+        <section class="content-section">
+            <h2 class="section-title">Memorable Scenes</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                Key moments that defined the story and characters
+            </p>
+            
+            <div class="grid">
+                <div class="card" style="border-left: 4px solid var(--gold);">
+                    <h3>🎭 The First Tarot Club Meeting</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        "Good afternoon, Mr. Fool~"
+                    </p>
+                    <p>
+                        The moment that changed everything. Above the gray fog, three strangers meet under the mysterious guidance of The Fool, beginning a relationship that would shape the fate of the world.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--gold);">
+                        <strong>Participants:</strong> Klein (The Fool), Audrey (Justice), Alger (The Hanged Man)
+                    </p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--silver);">
+                    <h3>⚔️ The Tingen Incident</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        "Captain..."
+                    </p>
+                    <p>
+                        The tragic event that ended Klein's peaceful life in Tingen City. Captain Dunn Smith's sacrifice and the battle against Ince Zangwill marked Klein's true entry into the dangerous world of high-sequence Beyonders.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--silver);">
+                        <strong>Casualties:</strong> Captain Dunn Smith, Daly Simone, Old Neil
+                    </p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--mystical-blue);">
+                    <h3>🌊 The Ghost Ship Incident</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        "I am Gehrman Sparrow."
+                    </p>
+                    <p>
+                        Klein's debut as the crazy adventurer Gehrman Sparrow. His fearless assault on the ghost ship established his reputation in the Five Seas and marked his evolution into a more proactive character.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--mystical-blue);">
+                        <strong>Result:</strong> Birth of the "World's" legend
+                    </p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--crimson);">
+                    <h3>⏰ The Final Battle with Amon</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        "I am The Fool."
+                    </p>
+                    <p>
+                        The climactic confrontation between Klein and Amon above the gray fog. Two brothers fighting for the right to become The Fool, with reality itself hanging in the balance.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--crimson);">
+                        <strong>Stakes:</strong> The fate of Sefirah Castle and Klein's humanity
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Collection -->
+        <section class="content-section">
+            <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                <h2 class="section-title">Memorable Quotes</h2>
+                <div style="margin: 2rem 0;">
+                    <p class="victorian-quote" style="font-size: 1.1rem; margin: 1.5rem 0;">
+                        The Fool that doesn't belong to this era, the mysterious ruler above the gray fog, the King of Yellow and Black who wields good luck.
+                    </p>
+                    <p class="accent-text">— The Fool's honorific name</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <p class="victorian-quote" style="font-size: 1.1rem; margin: 1.5rem 0;">
+                        Knowledge is dangerous. Some truths are not meant for mortal minds.
+                    </p>
+                    <p class="accent-text">— A recurring theme</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <p class="victorian-quote" style="font-size: 1.1rem; margin: 1.5rem 0;">
+                        Do not look directly at God!
+                    </p>
+                    <p class="accent-text">— The iron rule of Beyonders</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <p class="victorian-quote" style="font-size: 1.1rem; margin: 1.5rem 0;">
+                        May the Goddess watch over you.
+                    </p>
+                    <p class="accent-text">— Common blessing of the Evernight Church</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Visual Journey</h3>
+                <p class="footer-text">
+                    This gallery captures the essence of Lord of the Mysteries through artistic interpretations and memorable scenes.<br>
+                    Each image tells a part of the story that has captivated millions of readers worldwide.<br>
+                    From the mysterious gray fog to the industrial streets of Backlund, every scene is filled with wonder and danger.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <p class="victorian-quote">"In the realm of mysteries, every image holds a thousand secrets."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

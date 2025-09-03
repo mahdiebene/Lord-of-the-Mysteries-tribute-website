@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - Lord of the Mysteries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-symbol"></div>
+    </div>
+
+    <!-- Fog Overlay -->
+    <div class="fog-overlay"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-brand">Lord of Mysteries</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="pathways.html">Pathways</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="tarot-club.html">Tarot Club</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="characters.html" class="nav-link">Characters</a>
+        <a href="pathways.html" class="nav-link">Pathways</a>
+        <a href="world.html" class="nav-link">World</a>
+        <a href="tarot-club.html" class="nav-link">Tarot Club</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+
+    <div class="page-container">
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">Characters of Mystery</h1>
+                <p class="hero-subtitle">Meet the extraordinary individuals who walk the path of the supernatural</p>
+                <p class="victorian-quote">Each card tells a story, each story shapes destiny</p>
+            </div>
+        </section>
+
+        <!-- Tarot Club Members -->
+        <section class="content-section">
+            <h2 class="section-title">Members of the Tarot Club</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                Above the gray fog, in a palace that exists beyond reality, these chosen gather every Monday at 3 PM
+            </p>
+            
+            <div class="grid grid-3">
+                <div class="character-card">
+                    <img src="../assets/images/klein-moretti.svg" alt="Klein Moretti" class="character-image">
+                    <h3 class="character-name">Klein Moretti</h3>
+                    <p class="character-title">The Fool</p>
+                    <p class="character-pathway">Fool Pathway • Sequence 1</p>
+                    <div class="character-description">
+                        <p><strong>Real Name:</strong> Zhou Mingrui (from Earth)</p>
+                        <p><strong>Age:</strong> 22 (at start)</p>
+                        <p><strong>Origin:</strong> Tingen City, Loen Kingdom</p>
+                        <p><strong>Notable Quote:</strong> "I am the Fool that doesn't belong to this era."</p>
+                        <p style="margin-top: 1rem;">
+                            A university history graduate from Earth who transmigrated to a mysterious Victorian-era world. As The Fool, he presides over the Tarot Club while navigating the dangerous world of Beyonders, secret organizations, and ancient gods.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <img src="../assets/images/audrey-hall.svg" alt="Audrey Hall" class="character-image">
+                    <h3 class="character-name">Audrey Hall</h3>
+                    <p class="character-title">Justice</p>
+                    <p class="character-pathway">Spectator Pathway • Sequence 5</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 17 (at start)</p>
+                        <p><strong>Title:</strong> Earl Hall's daughter</p>
+                        <p><strong>Location:</strong> Backlund, Loen Kingdom</p>
+                        <p><strong>Notable Quote:</strong> "Good afternoon, Mr. Fool~"</p>
+                        <p style="margin-top: 1rem;">
+                            The most enthusiastic member of the Tarot Club, Audrey is a noble lady who balances her aristocratic duties with her journey as a Psychiatrist. Her curiosity about the mystical world drives much of the early plot.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <img src="../assets/images/alger-wilson.svg" alt="Alger Wilson" class="character-image">
+                    <h3 class="character-name">Alger Wilson</h3>
+                    <p class="character-title">The Hanged Man</p>
+                    <p class="character-pathway">Tyrant Pathway • Sequence 6</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 26</p>
+                        <p><strong>Occupation:</strong> Captain of Blue Avenger</p>
+                        <p><strong>Affiliation:</strong> Church of the Lord of Storms</p>
+                        <p><strong>Notable Quote:</strong> "The sea knows all secrets."</p>
+                        <p style="margin-top: 1rem;">
+                            A cunning sailor and captain who serves multiple masters while pursuing his own advancement through the Tyrant pathway. His pragmatic approach and naval knowledge prove invaluable to the Tarot Club.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <img src="../assets/images/derrick-berg.svg" alt="Derrick Berg" class="character-image">
+                    <h3 class="character-name">Derrick Berg</h3>
+                    <p class="character-title">The Sun</p>
+                    <p class="character-pathway">Sun Pathway • Sequence 7</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 16</p>
+                        <p><strong>Origin:</strong> City of Silver, Forsaken Land</p>
+                        <p><strong>Occupation:</strong> Exploration team member</p>
+                        <p><strong>Notable Quote:</strong> "The sun will rise again in Silver City."</p>
+                        <p style="margin-top: 1rem;">
+                            A young warrior from the Forsaken Land where the sun hasn't shone for over 2000 years. His pure heart and honest nature bring light to the Tarot Club, both literally and figuratively.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="XVI">
+                        <p style="color: var(--silver); font-size: 0.8rem; margin-top: 50px;">The Magician</p>
+                    </div>
+                    <h3 class="character-name">Fors Wall</h3>
+                    <p class="character-title">The Magician</p>
+                    <p class="character-pathway">Door Pathway • Sequence 7</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 20</p>
+                        <p><strong>Occupation:</strong> Best-selling novelist</p>
+                        <p><strong>Location:</strong> Backlund, Loen Kingdom</p>
+                        <p><strong>Notable Quote:</strong> "I'm too lazy to become a god."</p>
+                        <p style="margin-top: 1rem;">
+                            A talented writer plagued by mysterious whispers during full moons. Despite her lazy nature, she possesses sharp wit and growing power as an Astrologer in the Door pathway.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="XX">
+                        <p style="color: var(--gold); font-size: 0.8rem; margin-top: 50px;">Judgment</p>
+                    </div>
+                    <h3 class="character-name">Xio Derecha</h3>
+                    <p class="character-title">Judgment</p>
+                    <p class="character-pathway">Arbiter Pathway • Sequence 7</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 20</p>
+                        <p><strong>Height:</strong> 155 cm (petite but fierce)</p>
+                        <p><strong>Occupation:</strong> Bounty hunter</p>
+                        <p><strong>Notable Quote:</strong> "Justice must be served!"</p>
+                        <p style="margin-top: 1rem;">
+                            A short but formidable bounty hunter with an unwavering sense of justice. Her growing authority as an Interrogator makes her a valuable ally in East Borough's underworld.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="XIV">
+                        <p style="color: var(--crimson); font-size: 0.8rem; margin-top: 50px;">The Moon</p>
+                    </div>
+                    <h3 class="character-name">Emlyn White</h3>
+                    <p class="character-title">The Moon</p>
+                    <p class="character-pathway">Moon Pathway • Sequence 7</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> Appears 17 (actual age unknown)</p>
+                        <p><strong>Race:</strong> Sanguine (insists he's not a vampire)</p>
+                        <p><strong>Affiliation:</strong> Church of Earth Mother</p>
+                        <p><strong>Notable Quote:</strong> "I'm not a vampire!"</p>
+                        <p style="margin-top: 1rem;">
+                            A proud member of the Sanguine race who serves the Earth Mother Church. Despite his protests about vampiric stereotypes, his sophisticated tastes and prideful demeanor are unmistakable.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="IX">
+                        <p style="color: var(--mystical-blue); font-size: 0.8rem; margin-top: 50px;">The Hermit</p>
+                    </div>
+                    <h3 class="character-name">Cattleya</h3>
+                    <p class="character-title">The Hermit</p>
+                    <p class="character-pathway">Hermit Pathway • Sequence 3</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> Unknown</p>
+                        <p><strong>Title:</strong> Admiral of Stars</p>
+                        <p><strong>Ship:</strong> Future</p>
+                        <p><strong>Notable Quote:</strong> "Knowledge is the most precious treasure."</p>
+                        <p style="margin-top: 1rem;">
+                            One of the seven pirate admirals and a Knowledge Emperor who commands the mysterious ship "Future." She seeks forbidden knowledge across the Five Seas.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-image-placeholder" data-character="★">
+                        <p style="color: var(--silver); font-size: 0.8rem; margin-top: 50px;">The Star</p>
+                    </div>
+                    <h3 class="character-name">Leonard Mitchell</h3>
+                    <p class="character-title">The Star</p>
+                    <p class="character-pathway">Darkness Pathway • Sequence 6</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 22</p>
+                        <p><strong>Occupation:</strong> Red Glove, Church of Evernight</p>
+                        <p><strong>Location:</strong> Backlund</p>
+                        <p><strong>Notable Quote:</strong> "Ah, poetry in motion."</p>
+                        <p style="margin-top: 1rem;">
+                            A poetic Nighthawk with an angel parasitizing his body. Klein's former colleague who later becomes a Red Glove, walking the dangerous line between light and darkness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-symbol"></div>
+        </div>
+
+        <!-- Other Important Characters -->
+        <section class="content-section">
+            <h2 class="section-title">Other Key Characters</h2>
+            
+            <div class="grid grid-2">
+                <div class="character-card" style="min-height: 350px;">
+                    <div class="character-image-placeholder" data-character="∞">
+                        <p style="color: var(--silver); font-size: 0.8rem; margin-top: 50px;">Death Consul</p>
+                    </div>
+                    <h3 class="character-name">Azik Eggers</h3>
+                    <p class="character-title">Mr. Azik</p>
+                    <p class="character-pathway">Death Pathway • Sequence 2</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> Ancient (memory issues)</p>
+                        <p><strong>Title:</strong> Death Consul</p>
+                        <p><strong>Relationship:</strong> Klein's mentor and friend</p>
+                        <p style="margin-top: 1rem;">
+                            An ancient being suffering from memory loss who served as Klein's history teacher in Tingen. His copper whistle serves as Klein's lifeline in desperate situations.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card" style="min-height: 350px;">
+                    <div class="character-image-placeholder" data-character="⚔">
+                        <p style="color: var(--gold); font-size: 0.8rem; margin-top: 50px;">Captain</p>
+                    </div>
+                    <h3 class="character-name">Dunn Smith</h3>
+                    <p class="character-title">The Evernight Captain</p>
+                    <p class="character-pathway">Sleepless Pathway • Sequence 7</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> 38 (at time of death)</p>
+                        <p><strong>Title:</strong> Nighthawk Captain</p>
+                        <p><strong>Location:</strong> Tingen City</p>
+                        <p style="margin-top: 1rem;">
+                            The gray-eyed captain with poor memory who led the Tingen Nighthawks. His sacrifice to stop Ince Zangwill left an indelible mark on Klein's journey.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card" style="min-height: 350px;">
+                    <div class="character-image-placeholder" data-character="♠">
+                        <p style="color: var(--crimson); font-size: 0.8rem; margin-top: 50px;">Blasphemer</p>
+                    </div>
+                    <h3 class="character-name">Amon</h3>
+                    <p class="character-title">Angel of Time</p>
+                    <p class="character-pathway">Error Pathway • King of Angels</p>
+                    <div class="character-description">
+                        <p><strong>Age:</strong> Ancient</p>
+                        <p><strong>Title:</strong> The Blasphemer, Angel of Deceit</p>
+                        <p><strong>Symbol:</strong> Crystal monocle</p>
+                        <p style="margin-top: 1rem;">
+                            Son of the ancient sun god and Klein's greatest adversary. His monocle has become a symbol of paranoia throughout Klein's journey. "Stealing" is his nature.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="character-card" style="min-height: 350px;">
+                    <div class="character-image-placeholder" data-character="♛">
+                        <p style="color: var(--gold); font-size: 0.8rem; margin-top: 50px;">Goddess</p>
+                    </div>
+                    <h3 class="character-name">The Evernight Goddess</h3>
+                    <p class="character-title">Amanises</p>
+                    <p class="character-pathway">Evernight Pathway • Sequence 0</p>
+                    <div class="character-description">
+                        <p><strong>Domain:</strong> Night, Crimson Moon</p>
+                        <p><strong>Church:</strong> Church of the Evernight Goddess</p>
+                        <p><strong>Symbol:</strong> Crimson moon behind dark clouds</p>
+                        <p style="margin-top: 1rem;">
+                            The mysterious deity who rules over night and dreams. Her church serves as one of the most powerful orthodox organizations in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Relationships -->
+        <section class="content-section">
+            <h2 class="section-title">Relationships & Connections</h2>
+            <div class="card">
+                <h3>The Tarot Club Dynamics</h3>
+                <p style="margin-bottom: 1.5rem;">The Tarot Club operates on principles of equivalent exchange and mutual benefit, but deep bonds have formed:</p>
+                
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="color: var(--gold); margin-bottom: 0.5rem;">Inner Circle</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.9rem; line-height: 1.6;">
+                            <li>🃏 <strong>Klein (The Fool)</strong> - The mysterious leader who guides all</li>
+                            <li>⚖️ <strong>Audrey (Justice)</strong> - The enthusiastic noble who brings resources</li>
+                            <li>🔱 <strong>Alger (Hanged Man)</strong> - The pragmatic sailor with sea knowledge</li>
+                            <li>☀️ <strong>Derrick (The Sun)</strong> - The pure-hearted warrior from darkness</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--silver); margin-bottom: 0.5rem;">Extended Members</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.9rem; line-height: 1.6;">
+                            <li>🎭 <strong>Fors (The Magician)</strong> - Writer with door powers</li>
+                            <li>⚔️ <strong>Xio (Judgment)</strong> - Justice-seeking bounty hunter</li>
+                            <li>🌙 <strong>Emlyn (The Moon)</strong> - Proud Sanguine aristocrat</li>
+                            <li>🔮 <strong>Cattleya (The Hermit)</strong> - Knowledge-seeking pirate admiral</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Character Gallery</h3>
+                <p class="footer-text">
+                    Each character in Lord of the Mysteries represents a unique journey through the supernatural world.<br>
+                    From Klein's mysterious leadership to Audrey's noble curiosity, every member brings their own story to the Tarot Club.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <p class="victorian-quote">"Above the gray fog, all are equal under The Fool's gaze."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

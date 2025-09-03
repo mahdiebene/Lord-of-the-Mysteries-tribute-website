@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0A0E0F;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#bg)"/>
+  <circle cx="150" cy="140" r="55" fill="#1A2526" stroke="#C0C0C0" stroke-width="2"/>
+  <circle cx="135" cy="125" r="3" fill="#C0C0C0"/>
+  <circle cx="165" cy="125" r="3" fill="#C0C0C0"/>
+  <path d="M 135 150 Q 150 165 165 150" stroke="#C0C0C0" stroke-width="2" fill="none"/>
+  <path d="M 120 110 Q 150 95 180 110" stroke="#C0C0C0" stroke-width="3" fill="none"/>
+  <text x="150" y="280" text-anchor="middle" font-family="serif" font-size="22" fill="#C0C0C0">Audrey Hall</text>
+  <text x="150" y="310" text-anchor="middle" font-family="serif" font-size="16" fill="#D4A017">Justice</text>
+  <text x="150" y="350" text-anchor="middle" font-family="serif" font-size="48" fill="#C0C0C0" opacity="0.3">XI</text>
+</svg>
