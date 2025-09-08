@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tarot Club - Lord of the Mysteries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-symbol"></div>
+    </div>
+
+    <!-- Fog Overlay -->
+    <div class="fog-overlay"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-brand">Lord of Mysteries</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="pathways.html">Pathways</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="tarot-club.html">Tarot Club</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="characters.html" class="nav-link">Characters</a>
+        <a href="pathways.html" class="nav-link">Pathways</a>
+        <a href="world.html" class="nav-link">World</a>
+        <a href="tarot-club.html" class="nav-link">Tarot Club</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+
+    <div class="page-container">
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 60vh; background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), radial-gradient(circle at 50% 30%, rgba(212, 160, 23, 0.2) 0%, transparent 70%), var(--darker-bg);">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 3rem;">The Tarot Club</h1>
+                <p class="hero-subtitle">The most mysterious gathering in the world, where gods and mortals meet as equals</p>
+                <p class="victorian-quote" style="font-size: 1.2rem;">Good afternoon, Mr. Fool~</p>
+            </div>
+        </section>
+
+        <!-- Club Introduction -->
+        <section class="content-section">
+            <div class="card" style="border: 2px solid var(--gold); background: linear-gradient(135deg, rgba(212, 160, 23, 0.1), rgba(10, 14, 15, 0.95));">
+                <h2 class="section-title" style="color: var(--gold);">Above the Gray Fog</h2>
+                <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; text-align: center;">
+                    In a palace that exists beyond reality, shrouded in eternal gray fog, The Fool gathers his chosen. Every Monday at 3 PM Backlund time, members from across the world project their spirits to attend this most sacred of gatherings.
+                </p>
+                
+                <div class="grid grid-2">
+                    <div>
+                        <h3 style="color: var(--gold);">Meeting Details</h3>
+                        <ul style="font-size: 0.9rem; line-height: 1.6; list-style: none; padding: 0;">
+                            <li>📅 <strong>When:</strong> Every Monday, 3 PM Backlund time</li>
+                            <li>🏰 <strong>Where:</strong> Above the Gray Fog, in the ancient palace</li>
+                            <li>👤 <strong>Host:</strong> The Fool (Klein Moretti)</li>
+                            <li>🎭 <strong>Format:</strong> Spiritual projection, true identities hidden</li>
+                            <li>💰 <strong>Currency:</strong> Knowledge, favors, mystical items</li>
+                            <li>🤝 <strong>Principle:</strong> Equivalent exchange</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--gold);">Club Rules</h3>
+                        <ol style="font-size: 0.9rem; line-height: 1.6;">
+                            <li>Absolute confidentiality - what happens above the gray fog, stays above the gray fog</li>
+                            <li>Equivalent exchange - nothing is free in the world of mysticism</li>
+                            <li>Mutual assistance - members help each other when possible</li>
+                            <li>Respect for The Fool - ultimate authority rests with the host</li>
+                            <li>No violence during meetings - the sacred space must remain peaceful</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Members -->
+        <section class="content-section">
+            <h2 class="section-title">Current Members</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                The chosen few who gather in the ancient palace, each bearing their own burdens and secrets
+            </p>
+            
+            <div class="grid grid-3">
+                <!-- The Fool -->
+                <div class="character-card" style="border: 2px solid var(--gold);">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--gold); margin-bottom: 1rem;">🃏</div>
+                        <h3 class="character-name" style="color: var(--gold);">The Fool</h3>
+                        <p class="character-title">Host & Leader</p>
+                        <p style="color: var(--gold); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: 0</p>
+                        <p style="font-size: 0.9rem;">
+                            The mysterious ruler above the gray fog. Grants wishes, facilitates exchanges, and protects the sacred space with divine authority.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--gold); font-size: 0.85rem;">
+                            "I am The Fool that doesn't belong to this era."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Justice -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--silver); margin-bottom: 1rem;">⚖️</div>
+                        <h3 class="character-name">Justice</h3>
+                        <p class="character-title">The Noble Lady</p>
+                        <p style="color: var(--silver); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: XI</p>
+                        <p style="font-size: 0.9rem;">
+                            The most enthusiastic member, always eager to help and learn. Brings noble resources and psychological expertise to the club.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--silver); font-size: 0.85rem;">
+                            "Good afternoon, Mr. Fool~ Good afternoon, everyone~"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Hanged Man -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--mystical-blue); margin-bottom: 1rem;">🔱</div>
+                        <h3 class="character-name">The Hanged Man</h3>
+                        <p class="character-title">The Pragmatic Sailor</p>
+                        <p style="color: var(--mystical-blue); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: XII</p>
+                        <p style="font-size: 0.9rem;">
+                            The calculating member who values practical benefits. Provides maritime knowledge and church intelligence.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--mystical-blue); font-size: 0.85rem;">
+                            "The sea teaches patience and calculation."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Sun -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--gold); margin-bottom: 1rem;">☀️</div>
+                        <h3 class="character-name">The Sun</h3>
+                        <p class="character-title">The Pure Warrior</p>
+                        <p style="color: var(--gold); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: XIX</p>
+                        <p style="font-size: 0.9rem;">
+                            The honest and straightforward member from the Forsaken Land. Brings ancient knowledge and unwavering loyalty.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--gold); font-size: 0.85rem;">
+                            "The Chief says the sun will rise again."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Magician -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--silver); margin-bottom: 1rem;">🎭</div>
+                        <h3 class="character-name">The Magician</h3>
+                        <p class="character-title">The Lazy Writer</p>
+                        <p style="color: var(--silver); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: I</p>
+                        <p style="font-size: 0.9rem;">
+                            The reluctant member who prefers comfort over adventure. Provides literary connections and door pathway knowledge.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--silver); font-size: 0.85rem;">
+                            "Can't we solve this peacefully?"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Judgment -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--gold); margin-bottom: 1rem;">⚖️</div>
+                        <h3 class="character-name">Judgment</h3>
+                        <p class="character-title">The Small Giant</p>
+                        <p style="color: var(--gold); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: XX</p>
+                        <p style="font-size: 0.9rem;">
+                            The fierce bounty hunter with an unwavering sense of justice. Small in stature but mighty in determination.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--gold); font-size: 0.85rem;">
+                            "Justice must be served!"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Moon -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--crimson); margin-bottom: 1rem;">🌙</div>
+                        <h3 class="character-name">The Moon</h3>
+                        <p class="character-title">The Prideful Sanguine</p>
+                        <p style="color: var(--crimson); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: XVIII</p>
+                        <p style="font-size: 0.9rem;">
+                            The proud member who insists he's not a vampire. Brings Sanguine knowledge and Earth Mother Church connections.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--crimson); font-size: 0.85rem;">
+                            "I am not a vampire!"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Hermit -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--mystical-blue); margin-bottom: 1rem;">🔮</div>
+                        <h3 class="character-name">The Hermit</h3>
+                        <p class="character-title">The Admiral of Stars</p>
+                        <p style="color: var(--mystical-blue); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: IX</p>
+                        <p style="font-size: 0.9rem;">
+                            The knowledgeable pirate admiral who commands the mystical ship "Future." Seeks forbidden knowledge across the seas.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--mystical-blue); font-size: 0.85rem;">
+                            "Knowledge is the most precious treasure."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Star -->
+                <div class="character-card">
+                    <div style="text-align: center; padding: 2rem 1rem;">
+                        <div style="font-size: 4rem; color: var(--silver); margin-bottom: 1rem;">⭐</div>
+                        <h3 class="character-name">The Star</h3>
+                        <p class="character-title">The Poetic Nighthawk</p>
+                        <p style="color: var(--silver); font-size: 0.8rem; margin-bottom: 1rem;">Tarot Position: XVII</p>
+                        <p style="font-size: 0.9rem;">
+                            The newest member with poetry in his soul and shadows in his past. Brings Church intelligence and artistic sensibility.
+                        </p>
+                        <p style="font-style: italic; margin-top: 1rem; color: var(--silver); font-size: 0.85rem;">
+                            "Ah, the poetry of mysteries."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Club Evolution -->
+        <section class="content-section">
+            <h2 class="section-title">Evolution of the Club</h2>
+            
+            <div class="grid">
+                <div class="card" style="border-left: 4px solid var(--gold);">
+                    <h3>📅 Early Days (First Meetings)</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        Three strangers meet in the mysterious palace
+                    </p>
+                    <ul style="font-size: 0.9rem; line-height: 1.6;">
+                        <li>• Initial members: The Fool, Justice, The Hanged Man</li>
+                        <li>• Tentative exchanges and mutual observation</li>
+                        <li>• Establishment of basic rules and protocols</li>
+                        <li>• Audrey's enthusiastic "Good afternoon, Mr. Fool~" tradition begins</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--silver);">
+                    <h3>🌟 Growth Phase (Expanding Membership)</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        New members bring diverse knowledge and perspectives
+                    </p>
+                    <ul style="font-size: 0.9rem; line-height: 1.6;">
+                        <li>• Addition of The Sun from the mysterious Forsaken Land</li>
+                        <li>• The Magician joins, bringing Door pathway knowledge</li>
+                        <li>• Judgment and The Moon expand the club's reach</li>
+                        <li>• Formation of smaller alliances within the group</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--mystical-blue);">
+                    <h3>🚢 Maturation (High-Level Operations)</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The club becomes a force in the mystical world
+                    </p>
+                    <ul style="font-size: 0.9rem; line-height: 1.6;">
+                        <li>• The Hermit brings high-sequence knowledge</li>
+                        <li>• Major historical events influenced by club actions</li>
+                        <li>• Complex multi-national operations and conspiracies</li>
+                        <li>• Recognition by orthodox churches and secret organizations</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--crimson);">
+                    <h3>👑 Divine Era (Current State)</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The club operates under true divine protection
+                    </p>
+                    <ul style="font-size: 0.9rem; line-height: 1.6;">
+                        <li>• The Fool achieves true godhood (Sequence 0)</li>
+                        <li>• Members enjoy unprecedented protection and resources</li>
+                        <li>• Influence extends across multiple worlds and dimensions</li>
+                        <li>• Legacy secured for future generations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trading & Exchange -->
+        <section class="content-section">
+            <div class="card">
+                <h2 class="section-title">Trading & Exchanges</h2>
+                <p style="text-align: center; margin-bottom: 2rem; opacity: 0.9;">
+                    The lifeblood of the Tarot Club is the exchange of knowledge, items, and favors
+                </p>
+                
+                <div class="grid grid-3">
+                    <div>
+                        <h3 style="color: var(--gold);">💎 Common Trades</h3>
+                        <ul style="font-size: 0.85rem; line-height: 1.6;">
+                            <li>• Potion formulas and rituals</li>
+                            <li>• Mystical materials and artifacts</li>
+                            <li>• Information about secret organizations</li>
+                            <li>• Historical knowledge and ancient texts</li>
+                            <li>• Personal favors and assistance</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--silver);">🏆 Rare Exchanges</h3>
+                        <ul style="font-size: 0.85rem; line-height: 1.6;">
+                            <li>• Sealed artifacts and cursed items</li>
+                            <li>• High-sequence Beyonder characteristics</li>
+                            <li>• Divine blessings and protections</li>
+                            <li>• Access to restricted locations</li>
+                            <li>• Knowledge of true gods' secrets</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--mystical-blue);">🎁 The Fool's Gifts</h3>
+                        <ul style="font-size: 0.85rem; line-height: 1.6;">
+                            <li>• Spiritual projection ability</li>
+                            <li>• Protection from divination</li>
+                            <li>• Access to historical records</li>
+                            <li>• Resurrection services (rare)</li>
+                            <li>• Divine intervention in crises</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Famous Moments -->
+        <section class="content-section">
+            <h2 class="section-title">Memorable Moments</h2>
+            
+            <div class="grid">
+                <div class="card" style="background: linear-gradient(135deg, rgba(212, 160, 23, 0.1), rgba(10, 14, 15, 0.9));">
+                    <h3 style="color: var(--gold);">🎭 "Good Afternoon, Mr. Fool~"</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The greeting that became legendary
+                    </p>
+                    <p>
+                        Audrey's cheerful greeting set the tone for all future meetings. What began as simple politeness became a beloved tradition that even influenced how other members addressed The Fool.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💰 The First Major Exchange</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        Establishing the principle of equivalent exchange
+                    </p>
+                    <p>
+                        When Justice requested the Spectator potion formula, it set the precedent that nothing in the mystical world is free. The Hanged Man's demand for compensation established the club's core trading philosophy.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌞 The Sun's Arrival</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        Light from the darkest land
+                    </p>
+                    <p>
+                        Derrick's addition brought knowledge of the ancient world and the tragic history of the Forsaken Land. His pure heart and honest nature provided a moral anchor for the increasingly complex group.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ The Divine Revelation</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        When The Fool revealed his true power
+                    </p>
+                    <p>
+                        The moment when Klein's godhood became undeniable to the club members. The palace became more magnificent, the protection more absolute, and the members realized they served a true deity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy -->
+        <section class="content-section">
+            <div class="card" style="text-align: center; padding: 3rem;">
+                <h2 style="color: var(--gold); margin-bottom: 2rem;">The Club's Legacy</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    From humble beginnings as a gathering of three strangers, the Tarot Club has become one of the most influential organizations in the mystical world. Its members have shaped history, toppled empires, and influenced the very gods themselves.
+                </p>
+                <p class="victorian-quote" style="font-size: 1.3rem; margin: 2rem 0;">
+                    Above the gray fog, all secrets are shared, all burdens are lightened, and all dreams find their path to reality.
+                </p>
+                <p style="opacity: 0.8; font-style: italic;">
+                    The greatest gathering in the history of the mystical world continues every Monday at 3 PM, where mortals and gods meet as equals under The Fool's eternal gaze.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">The Sacred Gathering</h3>
+                <p class="footer-text">
+                    The Tarot Club represents the pinnacle of mystical cooperation and mutual growth.<br>
+                    Above the gray fog, in a palace beyond reality, the impossible becomes routine and legends are born.<br>
+                    Every Monday, the most important meeting in the world takes place.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <p class="victorian-quote">"May The Fool's blessing be upon you all."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

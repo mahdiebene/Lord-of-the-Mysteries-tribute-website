@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystical World - Lord of the Mysteries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-symbol"></div>
+    </div>
+
+    <!-- Fog Overlay -->
+    <div class="fog-overlay"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-brand">Lord of Mysteries</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="pathways.html">Pathways</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="tarot-club.html">Tarot Club</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="characters.html" class="nav-link">Characters</a>
+        <a href="pathways.html" class="nav-link">Pathways</a>
+        <a href="world.html" class="nav-link">World</a>
+        <a href="tarot-club.html" class="nav-link">Tarot Club</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+
+    <div class="page-container">
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">The Victorian-Era Mystical World</h1>
+                <p class="hero-subtitle">A world where gas lamps illuminate foggy streets, and ancient powers lurk in the shadows</p>
+                <p class="victorian-quote">In this age of steam and steel, madness and divinity dance together</p>
+            </div>
+        </section>
+
+        <!-- World Overview -->
+        <section class="content-section">
+            <div class="card">
+                <h2 class="section-title">The World of Beyonders</h2>
+                <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Set in an alternate Victorian era, the world of Lord of the Mysteries blends industrial revolution aesthetics with cosmic horror and mysticism. Steam-powered technology coexists with supernatural forces, while ancient gods and modern institutions compete for influence.
+                </p>
+                
+                <div class="grid grid-2">
+                    <div>
+                        <h3>🏭 Industrial Age Setting</h3>
+                        <ul style="font-size: 0.9rem; line-height: 1.6; margin-top: 1rem;">
+                            <li>Gas-lit streets and steam-powered machinery</li>
+                            <li>Telegraph communication across continents</li>
+                            <li>Railways connecting major cities</li>
+                            <li>Emerging photography and newspaper industries</li>
+                            <li>Social hierarchies and class distinctions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>🔮 Mystical Undercurrents</h3>
+                        <ul style="font-size: 0.9rem; line-height: 1.6; margin-top: 1rem;">
+                            <li>Hidden Beyonder communities</li>
+                            <li>Ancient artifacts and sealed artifacts</li>
+                            <li>Mysterious locations beyond normal space</li>
+                            <li>Cosmic entities watching from beyond</li>
+                            <li>Secret rituals and occult knowledge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Major Kingdoms and Nations -->
+        <section class="content-section">
+            <h2 class="section-title">Major Kingdoms & Nations</h2>
+            
+            <div class="grid">
+                <div class="card" style="border-left: 4px solid #8B0000;">
+                    <h3>🏰 Loen Kingdom</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The Victorian-inspired kingdom where Klein begins his journey
+                    </p>
+                    <div class="grid grid-2">
+                        <div>
+                            <p><strong>Capital:</strong> Backlund</p>
+                            <p><strong>Major Cities:</strong> Tingen, Enmat Port, Constant</p>
+                            <p><strong>Government:</strong> Constitutional Monarchy</p>
+                            <p><strong>Ruler:</strong> King George III</p>
+                        </div>
+                        <div>
+                            <p><strong>Dominant Church:</strong> Church of the Evernight Goddess</p>
+                            <p><strong>Characteristics:</strong> Industrial powerhouse, foggy weather</p>
+                            <p><strong>Notable Features:</strong> Parliament, Royal Family, Fog</p>
+                            <p><strong>Population:</strong> Primarily Loenese</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        Loen Kingdom serves as the primary setting for much of the story, featuring iconic locations like the foggy streets of Backlund, the mysterious Tingen City, and the industrial centers that drive the kingdom's economy.
+                    </p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #4682B4;">
+                    <h3>🦅 Feysac Empire</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The northern military powerhouse with a warrior culture
+                    </p>
+                    <div class="grid grid-2">
+                        <div>
+                            <p><strong>Capital:</strong> Saint Milon</p>
+                            <p><strong>Government:</strong> Military Empire</p>
+                            <p><strong>Ruler:</strong> Emperor Alista Tudor</p>
+                            <p><strong>Military Focus:</strong> Professional armies</p>
+                        </div>
+                        <div>
+                            <p><strong>Dominant Church:</strong> Church of the Lord of Storms</p>
+                            <p><strong>Climate:</strong> Cold northern territories</p>
+                            <p><strong>Culture:</strong> Honor-based, military traditions</p>
+                            <p><strong>Threats:</strong> Frost sequence monsters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #FFD700;">
+                    <h3>🎭 Intis Republic</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The revolutionary nation of art, industry, and political upheaval
+                    </p>
+                    <div class="grid grid-2">
+                        <div>
+                            <p><strong>Capital:</strong> Trier</p>
+                            <p><strong>Government:</strong> Republic</p>
+                            <p><strong>Revolution:</strong> Recently overthrew monarchy</p>
+                            <p><strong>Industry:</strong> Advanced manufacturing</p>
+                        </div>
+                        <div>
+                            <p><strong>Dominant Church:</strong> Church of the Eternal Blazing Sun</p>
+                            <p><strong>Culture:</strong> Art, philosophy, revolution</p>
+                            <p><strong>Technology:</strong> Leading in innovation</p>
+                            <p><strong>Politics:</strong> Republican ideals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #9370DB;">
+                    <h3>🌙 Feynapotter Kingdom</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        The mystical kingdom known for its scholars and mystery schools
+                    </p>
+                    <div class="grid grid-2">
+                        <div>
+                            <p><strong>Capital:</strong> Feynapotter City</p>
+                            <p><strong>Government:</strong> Scholarly Monarchy</p>
+                            <p><strong>Specialization:</strong> Research and education</p>
+                            <p><strong>Universities:</strong> Renowned academies</p>
+                        </div>
+                        <div>
+                            <p><strong>Dominant Church:</strong> Church of Knowledge and Wisdom</p>
+                            <p><strong>Culture:</strong> Academic pursuit, mysticism</p>
+                            <p><strong>Notable:</strong> Ancient libraries and archives</p>
+                            <p><strong>Mysteries:</strong> Hidden knowledge vaults</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Seven Orthodox Churches -->
+        <section class="content-section">
+            <h2 class="section-title">The Seven Orthodox Churches</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                The dominant religious organizations that maintain order and stability in the world
+            </p>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🌙 Church of the Evernight Goddess</h3>
+                    <p><strong>Deity:</strong> Evernight Goddess (Amanises)</p>
+                    <p><strong>Domain:</strong> Night, Dreams, Death, Concealment</p>
+                    <p><strong>Headquarters:</strong> Saint Samuel Cathedral, Backlund</p>
+                    <p><strong>Key Personnel:</strong> Archbishop Anthony, Leonard Mitchell</p>
+                    <p><strong>Special Forces:</strong> Red Gloves, Nighthawks</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        The most influential church in Loen Kingdom, known for their Nighthawk teams that handle supernatural incidents in major cities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Church of the Lord of Storms</h3>
+                    <p><strong>Deity:</strong> Lord of Storms</p>
+                    <p><strong>Domain:</strong> Storms, Sea, Sky, Weather</p>
+                    <p><strong>Headquarters:</strong> Pasu Island</p>
+                    <p><strong>Key Personnel:</strong> Cardinals and Storm Bishops</p>
+                    <p><strong>Special Forces:</strong> Mandated Punishers</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        Dominant in coastal regions and the Feysac Empire, with powerful maritime influence and weather control abilities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>☀️ Church of the Eternal Blazing Sun</h3>
+                    <p><strong>Deity:</strong> Eternal Blazing Sun</p>
+                    <p><strong>Domain:</strong> Sun, Light, Fire, Purification</p>
+                    <p><strong>Headquarters:</strong> Intis Republic</p>
+                    <p><strong>Key Personnel:</strong> Solar Bishops and Cardinals</p>
+                    <p><strong>Special Forces:</strong> Eternal Blazing Sun Inquisition</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        The state religion of Intis Republic, known for their purification rituals and opposition to evil entities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Church of the God of Steam and Machinery</h3>
+                    <p><strong>Deity:</strong> God of Steam and Machinery</p>
+                    <p><strong>Domain:</strong> Technology, Industry, Innovation</p>
+                    <p><strong>Headquarters:</strong> Various industrial centers</p>
+                    <p><strong>Key Personnel:</strong> Engineer-Priests</p>
+                    <p><strong>Special Forces:</strong> Mechanical Hearts</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        Embraces technological advancement while maintaining divine worship, popular among inventors and engineers.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌍 Church of the Earth Mother</h3>
+                    <p><strong>Deity:</strong> Earth Mother</p>
+                    <p><strong>Domain:</strong> Nature, Harvest, Life, Fertility</p>
+                    <p><strong>Headquarters:</strong> Rural communities</p>
+                    <p><strong>Key Personnel:</strong> Nature Priests and Druids</p>
+                    <p><strong>Special Forces:</strong> Life School of Thought</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        Focuses on agricultural communities and natural harmony, with strong influence in rural areas.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📚 Church of the God of Knowledge and Wisdom</h3>
+                    <p><strong>Deity:</strong> God of Knowledge and Wisdom</p>
+                    <p><strong>Domain:</strong> Knowledge, Wisdom, Learning</p>
+                    <p><strong>Headquarters:</strong> Feynapotter Kingdom</p>
+                    <p><strong>Key Personnel:</strong> Scholar-Priests</p>
+                    <p><strong>Special Forces:</strong> Knowledge Keepers</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem;">
+                        Maintains vast libraries and educational institutions, serving as guardians of both mundane and mystical knowledge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secret Organizations -->
+        <section class="content-section">
+            <h2 class="section-title">Secret Organizations</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                Hidden societies that operate in the shadows, each with their own agendas
+            </p>
+            
+            <div class="grid">
+                <div class="card" style="border: 2px solid var(--gold); background: linear-gradient(135deg, rgba(212, 160, 23, 0.1), rgba(10, 14, 15, 0.9));">
+                    <h3>🎪 The Tarot Club</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--gold);">
+                        The most mysterious gathering above the gray fog
+                    </p>
+                    <div class="grid grid-2">
+                        <div>
+                            <p><strong>Leader:</strong> The Fool (Klein Moretti)</p>
+                            <p><strong>Meeting Time:</strong> Mondays, 3 PM Backlund time</p>
+                            <p><strong>Location:</strong> Above the Gray Fog</p>
+                            <p><strong>Members:</strong> 9+ (as of latest)</p>
+                        </div>
+                        <div>
+                            <p><strong>Purpose:</strong> Knowledge exchange and mutual aid</p>
+                            <p><strong>Rules:</strong> Equivalent exchange, absolute secrecy</p>
+                            <p><strong>Influence:</strong> Growing across multiple nations</p>
+                            <p><strong>Power:</strong> Protected by The Fool's authority</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #8B0000;">
+                    <h3>👁️ Twilight Hermit Order</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        Ancient conspiracy spanning millennia
+                    </p>
+                    <p><strong>Purpose:</strong> Manipulating historical events</p>
+                    <p><strong>Members:</strong> High-sequence Beyonders and Kings of Angels</p>
+                    <p><strong>Influence:</strong> Global, across all major organizations</p>
+                    <p><strong>Goal:</strong> Controlling the fate of civilizations</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #FF69B4;">
+                    <h3>🌹 Demoness Sect</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        Practitioners of pleasure and catastrophe
+                    </p>
+                    <p><strong>Pathway:</strong> Demoness Pathway</p>
+                    <p><strong>Methods:</strong> Seduction, assassination, chaos</p>
+                    <p><strong>Influence:</strong> High society and underground</p>
+                    <p><strong>Danger:</strong> Extremely high threat level</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid #FF4500;">
+                    <h3>🎯 Aurora Order</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic; color: var(--silver);">
+                        Fanatical believers of the True Creator
+                    </p>
+                    <p><strong>Deity:</strong> True Creator (Fallen Creator)</p>
+                    <p><strong>Activity:</strong> Terrorist attacks, corruption</p>
+                    <p><strong>Members:</strong> Mentally unstable extremists</p>
+                    <p><strong>Status:</strong> Wanted by all orthodox churches</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mysterious Locations -->
+        <section class="content-section">
+            <h2 class="section-title">Mysterious Locations</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🌫️ Above the Gray Fog</h3>
+                    <p style="margin-bottom: 1rem; color: var(--silver);">
+                        The mystical space where the Tarot Club gathers
+                    </p>
+                    <ul style="font-size: 0.85rem; line-height: 1.6;">
+                        <li>• Exists beyond normal space and time</li>
+                        <li>• Contains a magnificent ancient palace</li>
+                        <li>• Accessible only through The Fool's power</li>
+                        <li>• Immune to divination and scrying</li>
+                        <li>• Source of Klein's mysterious abilities</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🏴‍☠️ The Five Seas</h3>
+                    <p style="margin-bottom: 1rem; color: var(--silver);">
+                        Dangerous waters filled with pirates and monsters
+                    </p>
+                    <ul style="font-size: 0.85rem; line-height: 1.6;">
+                        <li>• Sonia Sea - Main trade routes</li>
+                        <li>• Mistral Sea - Pirate territories</li>
+                        <li>• Polar Sea - Frozen dangers</li>
+                        <li>• Violent Sea - Storm-wracked waters</li>
+                        <li>• Pristine Sea - Mysterious calm waters</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🌑 Forsaken Land</h3>
+                    <p style="margin-bottom: 1rem; color: var(--silver);">
+                        The abandoned realm where the sun no longer shines
+                    </p>
+                    <ul style="font-size: 0.85rem; line-height: 1.6;">
+                        <li>• Sunless for over 2,000 years</li>
+                        <li>• Home to the City of Silver</li>
+                        <li>• Filled with dangerous monsters</li>
+                        <li>• Ancient ruins and lost civilizations</li>
+                        <li>• Cut off from normal world</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>💀 Spirit World</h3>
+                    <p style="margin-bottom: 1rem; color: var(--silver);">
+                        The realm of spirits and supernatural entities
+                    </p>
+                    <ul style="font-size: 0.85rem; line-height: 1.6;">
+                        <li>• Overlaps with the material world</li>
+                        <li>• Contains ancient cities and ruins</li>
+                        <li>• Home to various spirit creatures</li>
+                        <li>• Accessible through specific rituals</li>
+                        <li>• Dangerous for unprepared visitors</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">The World of Mysteries</h3>
+                <p class="footer-text">
+                    A rich tapestry of nations, churches, and secret organizations, all interconnected by the supernatural forces that shape reality itself.<br>
+                    From the foggy streets of Backlund to the sunless wastes of the Forsaken Land, every location holds secrets waiting to be discovered.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <p class="victorian-quote">"In this world, knowledge is power, but power comes at the cost of sanity."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
